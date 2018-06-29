@@ -11,7 +11,7 @@ while(True):
 		else:
 			print(False);
 	else:
-		print(True);
+		print(False);
 	another_word = input('Would you like to enter another word? Enter(y/n)').lower()
 	if another_word == 'y':
 		word = input('Enter a word: ')
