@@ -10,8 +10,13 @@ while(True):
 			print(True);
 		else:
 			print(False);
+	elif 'i' in word and 'e' in word:
+		if word.index('i') < word.index('e'):
+			print(True);
+		else:
+			print(False);
 	else:
-		print(False);
+		print(True);
 	another_word = input('Would you like to enter another word? Enter(y/n)').lower()
 	if another_word == 'y':
 		word = input('Enter a word: ')
