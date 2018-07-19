@@ -28,8 +28,6 @@ with open(file, 'r')as f:
 
 	my_coins_string = ' '.join(x for x in coins)
 
-	print(list2)
-
 	# total value
 	print(change_amount)
 
