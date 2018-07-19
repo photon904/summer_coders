@@ -13,18 +13,11 @@ with open(file, 'r')as f:
 	# parse
 	list2 = f_content2.split(" ")
 
-	f_content3 = f.readline()
-	list3 = f_content3.split(" ")
-
-
 	# get rid of the garbage data in list
 	list1.pop(0)
 	list1.pop(-1)
 
 	list2.pop(0)
-
-	list3.pop(0)
-
 
 	# slice the index that reps the change amount out of list1 
 	# and store the total value in a var, and make it an int
@@ -35,7 +28,7 @@ with open(file, 'r')as f:
 
 	my_coins_string = ' '.join(x for x in coins)
 
-	eng_output = " ".join(x for x in list3)
+	print(list2)
 
 	# total value
 	print(change_amount)
@@ -43,6 +36,16 @@ with open(file, 'r')as f:
 	# space seperated list of coins 
 	print(my_coins_string)
 
-	# third line is the bound -- eng des of the bound.
-	print(eng_output)
-
+	# third line is the bound --
+	sign = list2[1]
+	number = int(list2[2])
+	num_less = number - 1
+	num_more = int(number) + 1 
+	if sign == '<':
+		print(f'Program can only accept {num_less} or less coins')
+	elif sign == '>' and sign == '=':
+		print(f'Program can accept {number} or more coins')
+	elif sign == '<' and sign == '=':
+		print(f'Program can accept {number} or less coins')
+	else:
+		print(f'Program can accept {num_more} or more coins')
