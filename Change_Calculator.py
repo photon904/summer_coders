@@ -41,9 +41,9 @@ with open(file, 'r')as f:
 	num_more = int(number) + 1 
 	if sign == '<':
 		print(f'Program can only accept {num_less} or less coins')
-	elif sign == '>' and sign == '=':
+	elif sign == '>=':
 		print(f'Program can accept {number} or more coins')
-	elif sign == '<' and sign == '=':
+	elif sign == '<=':
 		print(f'Program can accept {number} or less coins')
 	else:
 		print(f'Program can accept {num_more} or more coins')
