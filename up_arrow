@@ -1,0 +1,31 @@
+# read any input file.
+file = input('Enter a file: ').strip()
+
+# open the file
+with open(file, 'r')as f:
+	# read it line by line so you can parse the file. 
+	f_content1 = f.readline()
+
+	# parse the data
+	notation_list = f_content1.split(" ")
+
+	# print list
+	print(notation_list)
+
+	# slice the list accorsing to position in the notation
+	first_num = int(notation_list[0])
+	arrow_num = int(notation_list[1])
+	second_num = int(notation_list[2]) 
+
+	# testing the values
+	if arrow_num == 2:
+		count = 0
+		calc = 1
+		while count < second_num:
+			calc *= first_num ** second_num
+			count += 1
+		print(calc)
+	elif arrow_num == 3:
+		print('tbd')
+	else:
+		print(first_num ** second_num)
